@@ -7,8 +7,6 @@ snippet ket "\ket{\psi}"
 snippet bck "\bra{\psi} A \ket{\psi}"
 	\\bra{${1:\\psi}}${2:A}\\ket{${3:\\psi}}$0 
 
-snippet omega "\omega"
-	\\omega $0
 snippet hbar "\hbar"
 	\\hbar $0
 snippet approx "\approx "
@@ -21,6 +19,20 @@ snippet derivada "\frac{d x}{d y}"
 	\\frac{d ${1:x} }{d ${2:y}}$0  
 snippet dot "\dot x"
 	\\dot ${1:x}$0 
+
+# Trigonometricas############################################
+snippet sin "\sin{\theta}"
+	\\sin{${1:\\theta}} $0 
+snippet cos "\cos{\theta}"
+	\\cos{${1:\\theta}} $0 
+snippet tan "\tan{\theta}"
+	\\tan{${1:\\theta}} $0 
+
+# espacios numericos	#######################################
+snippet real "\mathbb{R}"
+	\\mathbb{R}$0 
+snippet inf "\infty"
+	\\infty
 
 # misc	#####################################################
 
@@ -51,8 +63,19 @@ snippet noteq "\neq "
 snippet frac "\frac{}{}"
 	\\frac{${1:1}}{${2:2}}$0 
 
+snippet under "\underset{under}{equation}"
+	\\underset{${1:}}{${2:x}}$0 
+
+snippet rarrow "\rightarrow"
+	\\rightarrow $0 
+
+snippet larrow "\rightarrow"
+	\\leftarrow $0 
+snippet text "\text{}"
+	\\text{$1}$0 
+
 # Vector ####################################################
-snippet vector3 "Vector de 3 dimensiones."
+snippet vvector3 "Vector de 3 dimensiones."
     \\begin{bmatrix}
         ${1:x} \\\\
         ${2:y} \\\\
@@ -60,7 +83,7 @@ snippet vector3 "Vector de 3 dimensiones."
     \\end{bmatrix}$0 
 snippet hvector3
     \begin{bmatrix} ${1:x} & ${2:y} & ${3:z} \end{bmatrix}$0 
-snippet vector4 "Vector de 4 dimensiones."
+snippet vvector4 "Vector de 4 dimensiones."
     \\begin{bmatrix}
         ${1:x} \\\\
         ${2:y} \\\\
@@ -111,8 +134,23 @@ snippet dmatrix4x4
 
 # template	#################################################
 
-snippet caja "\caja{Titulo}{Cuerpo}"
-	\\caja{${1:Titulo}}{
+snippet caja "\caja{color}{Titulo}{Cuerpo}"
+	\\caja{${1:blue}}{${2:Titulo}}{
+		${0}
+	}
+
+snippet eq "\caja{color}{Titulo}{Cuerpo}"
+	\\caja{red}{${2:Titulo}}{
+		${0}
+	}
+
+snippet teo "\caja{color}{Titulo}{Cuerpo}"
+	\\caja{green}{${2:Titulo}}{
+		${0}
+	}
+
+snippet nota "\caja{color}{Titulo}{Cuerpo}"
+	\\caja{black}{${2:Titulo}}{
 		${0}
 	}
 
@@ -121,6 +159,10 @@ snippet template "Template para tomar notas."
 
 	\\usepackage[most]{tcolorbox}
 	\\usepackage{physics}
+	\\usepackage{graphicx}
+	\\usepackage{amsmath}
+	\\usepackage{amssymb}
+
 
 	\\usepackage[utf8]{inputenc}
 	\\usepackage[a4paper, margin=1in]{geometry} % Controla los márgenes
@@ -139,9 +181,9 @@ snippet template "Template para tomar notas."
 		\\vspace*{2cm} % Espacio vertical después de la fecha
 	}
 
-	\\newcommand{\\caja}[2]{%
-		\\begin{tcolorbox}[colback=blue!5!white,colframe=blue!25!black,title=#1]
-			#2
+	\\newcommand{\\caja}[3]{%
+		\\begin{tcolorbox}[colback=#1!5!white,colframe=#1!25!black,title=#2]
+			#3
 		\\end{tcolorbox}%
 	}
 
