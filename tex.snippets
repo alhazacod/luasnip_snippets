@@ -32,7 +32,21 @@ snippet tan "\tan{\theta}"
 snippet real "\mathbb{R}"
 	\\mathbb{R}$0
 snippet inf "\infty"
-	\\infty
+	\\infty$0
+snippet complex "\mathbb{C}"
+	\\mathbb{C}$0
+snippet im "Im(a)"
+	Im\\left($1\\right)$0
+snippet re "Re()"
+	Re\\left($1\\right)$0
+
+# Funciones #################################################
+snippet func "f(x)"
+	${1:f}\\left(${2:x}\\right)=$0
+snippet func2 "f(x,y)"
+	${1:f}\\left(${2:x},${3:y}\\right)=$0
+snippet func3 "f(x,y,z)"
+	${1:f}\\left(${2:x},${3:y},${4:z}\\right)=$0
 
 # misc	#####################################################
 
@@ -47,10 +61,16 @@ snippet gat "\begin{gather} ... \label{eq:} ... \end{gather}"
 		$2 $0
 		\\label{eq:${1:null}}
 	\\end{gather}
-snippet _ "_{}"
+snippet sub "_{}"
 	_{$1} $0
 snippet sqrt "\sqrt{}"
 	\\sqrt{${1:\\alpha:}} $0
+snippet dot "\dot"
+	\\dot $0
+snippet ddot "\dot"
+	\\ddot $0
+snippet abs "|a|"
+	\\left|$1\\right|$0
 snippet noteq "\neq "
 	\\neq $0
 snippet frac "\frac{}{}"
@@ -63,6 +83,12 @@ snippet larrow "\rightarrow"
 	\\leftarrow $0
 snippet text "\text{}"
 	\\text{$1}$0
+snippet parentesis "()"
+	\\left($1\\right)$0
+snippet parentesis2 "()"
+	\\left[$1\\right]$0
+snippet cubed "^2"
+	^2$0
 
 # Vector ####################################################
 snippet vvector3 "Vector de 3 dimensiones."
