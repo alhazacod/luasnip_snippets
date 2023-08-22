@@ -5,7 +5,7 @@ snippet bra "\bra{\psi}"
 snippet ket "\ket{\psi}"
 	\\ket{${1:\\psi}}$0
 snippet bck "\bra{\psi} A \ket{\psi}"
-	\\bra{${1:\\psi}}${2:A}\\ket{${3:\\psi}}$0 
+	\\bra{${1:\\psi}}${2:}\\ket{${3:\\psi}}$0 
 
 snippet hbar "\hbar"
 	\\hbar $0
@@ -14,23 +14,23 @@ snippet approx "\approx "
 
 # Derivadas #################################################
 snippet partial "\frac{\partial x }{\partial y}"
-	\\frac{\\partial ${1:x} }{\\partial ${2:y}}$0  
+	\\frac{\\partial ${1:x} }{\\partial ${2:y}}$0
 snippet derivada "\frac{d x}{d y}"
-	\\frac{d ${1:x} }{d ${2:y}}$0  
+	\\frac{d ${1:x} }{d ${2:y}}$0
 snippet dot "\dot x"
-	\\dot ${1:x}$0 
+	\\dot ${1:x}$0
 
 # Trigonometricas############################################
 snippet sin "\sin{\theta}"
-	\\sin{${1:\\theta}} $0 
+	\\sin{${1:\\theta}}$0
 snippet cos "\cos{\theta}"
-	\\cos{${1:\\theta}} $0 
+	\\cos{${1:\\theta}}$0
 snippet tan "\tan{\theta}"
-	\\tan{${1:\\theta}} $0 
+	\\tan{${1:\\theta}}$0
 
 # espacios numericos	#######################################
 snippet real "\mathbb{R}"
-	\\mathbb{R}$0 
+	\\mathbb{R}$0
 snippet inf "\infty"
 	\\infty
 
@@ -38,41 +38,31 @@ snippet inf "\infty"
 
 snippet times "\times"
 	\\times $0
-
 snippet times10 "\times10^"
 	\\times10^{$1}$0
-
 snippet eq:ref "Ref equation"
 	eq. \\ref{eq:$1} $0
-
 snippet gat "\begin{gather} ... \label{eq:} ... \end{gather}"
 	\\begin{gather}
 		$2 $0
 		\\label{eq:${1:null}}
 	\\end{gather}
-
 snippet _ "_{}"
 	_{$1} $0
-
 snippet sqrt "\sqrt{}"
-	\\sqrt{${1:\\alpha:}} $0 
-
+	\\sqrt{${1:\\alpha:}} $0
 snippet noteq "\neq "
-	\\neq $0 
-
+	\\neq $0
 snippet frac "\frac{}{}"
-	\\frac{${1:1}}{${2:2}}$0 
-
+	\\frac{${1:1}}{${2:2}}$0
 snippet under "\underset{under}{equation}"
-	\\underset{${1:}}{${2:x}}$0 
-
+	\\underset{${1:}}{${2:x}}$0
 snippet rarrow "\rightarrow"
-	\\rightarrow $0 
-
+	\\rightarrow $0
 snippet larrow "\rightarrow"
-	\\leftarrow $0 
+	\\leftarrow $0
 snippet text "\text{}"
-	\\text{$1}$0 
+	\\text{$1}$0
 
 # Vector ####################################################
 snippet vvector3 "Vector de 3 dimensiones."
