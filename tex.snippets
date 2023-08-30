@@ -91,6 +91,8 @@ snippet cubed "^2"
 	^2$0
 
 # Vector ####################################################
+snippet ov "\overrightarrow "
+	\\overrightarrow $0
 snippet vvector3 "Vector de 3 dimensiones."
     \\begin{bmatrix}
         ${1:x} \\\\
@@ -121,7 +123,7 @@ snippet matrix33
         ${4:a21} & ${5:a22} & ${6:a23} \\\\
         ${7:a31} & ${8:a32} & ${9:a33}
     \\end{bmatrix} $0 
-snippet matrix4x4
+snippet matrix44
     \\begin{bmatrix}
         ${1:a11} & ${2:a12} & ${3:a13} & ${4:a14} \\\\
         ${5:a21} & ${6:a22} & ${7:a23} & ${8:a24} \\\\
@@ -176,6 +178,7 @@ snippet template "Template para tomar notas."
 	\\usepackage[most]{tcolorbox}
 	\\usepackage{physics}
 	\\usepackage{graphicx}
+	\\usepackage{float}
 	\\usepackage{amsmath}
 	\\usepackage{amssymb}
 
