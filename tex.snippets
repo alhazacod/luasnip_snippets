@@ -27,8 +27,18 @@ snippet cos "\cos{\theta}"
 	\\cos{${1:\\theta}}$0
 snippet tan "\tan{\theta}"
 	\\tan{${1:\\theta}}$0
+snippet sinh "\sinh{\theta}"
+	\\sinh{${1:\\theta}}$0
+snippet cosh "\cosh{\theta}"
+	\\cosh{${1:\\theta}}$0
+snippet tanh "\tanh{\theta}"
+	\\tanh{${1:\\theta}}$0
 
 # espacios numericos	#######################################
+snippet bb "\mathbb{}"
+	\\mathbb{$1}$0
+snippet identidad "\mathbb{I}"
+	\\mathbb{I}$0
 snippet real "\mathbb{R}"
 	\\mathbb{R}$0
 snippet inf "\infty"
@@ -57,10 +67,9 @@ snippet times10 "\times10^"
 snippet eq:ref "Ref equation"
 	eq. \\ref{eq:$1} $0
 snippet gat "\begin{gather} ... \label{eq:} ... \end{gather}"
-	\\begin{gather}
-		$2 $0
-		\\label{eq:${1:null}}
-	\\end{gather}
+	\\begin{gather*}
+		$1 $0
+	\\end{gather*}
 snippet sub "_{}"
 	_{$1} $0
 snippet sqrt "\sqrt{}"
