@@ -12,6 +12,12 @@ snippet hbar "\hbar"
 snippet approx "\approx "
 	\\approx $0 
 
+snippet com "\left[ , \right]"
+	\\left[ ${1:\\hat{H^{(N)\}\}} , $2  \\right]$0
+
+snippet observable "\expval{A}"
+	\\expval{${1:\hat A}}$0
+
 # Derivadas #################################################
 snippet partial "\frac{\partial x }{\partial y}"
 	\\frac{\\partial ${1:x} }{\\partial ${2:y}}$0
